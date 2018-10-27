@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SessionsController < Clearance::SessionsController
   private
 
@@ -10,10 +12,10 @@ class SessionsController < Clearance::SessionsController
   end
 
   def session_params_with_email
-    params.
-      require(:session).
-      permit(:password).
-      merge(email: user.email)
+    params
+      .require(:session)
+      .permit(:password)
+      .merge(email: user.email)
   end
 
   def user

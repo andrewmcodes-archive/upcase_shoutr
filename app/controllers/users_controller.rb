@@ -1,5 +1,6 @@
-class UsersController < Clearance::UsersController
+# frozen_string_literal: true
 
+class UsersController < Clearance::UsersController
   private
 
   def user_params

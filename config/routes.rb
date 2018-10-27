@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   end
 
   root to: 'homes#show'
+
+  resources :shouts, only: [:create]
+
   resources :passwords, controller: 'clearance/passwords', only: %i[create new]
   resource :session, only: [:create]
 

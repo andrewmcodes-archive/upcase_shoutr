@@ -21,17 +21,22 @@ gem 'webpacker'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-rails'
 end
 
 group :development do
   gem 'better_errors', '~> 2.4'
   gem 'binding_of_caller', '~> 0.8.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'pry-rails'
   gem 'rubocop'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'fabrication'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

@@ -70,12 +70,14 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    database_cleaner (1.7.0)
     debug_inspector (0.0.3)
     email_validator (1.6.0)
       activemodel
     erubi (1.7.1)
     erubis (2.7.0)
     execjs (2.7.0)
+    fabrication (2.20.1)
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -240,6 +242,8 @@ DEPENDENCIES
   byebug
   clearance
   coffee-rails
+  database_cleaner
+  fabrication
   haml-rails (~> 1.0)
   jbuilder (~> 2.5)
   jquery-rails

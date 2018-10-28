@@ -1,7 +1,12 @@
-%h1 Dashboards
-
-= form_for @shout do |form|
-  = form.text_field :body, placeholder: "shout here!!", required: true
-  = form.submit "shout!!"
-
-= render @shouts
+%h1.text-light Dashboard
+.row.pt-4
+  .col
+    .card
+      .card-body
+        = form_for @shout do |form|
+          .form-group
+            = label_tag 'body', 'New shout:', class: "card-title font-weight-bold"
+            = form.text_field :body, placeholder: "Enter your shout...", required: true, class: "form-control"
+          = form.submit "shout!", class: "btn btn-primary"
+  .col.bg-light.p-4
+    = render @shouts

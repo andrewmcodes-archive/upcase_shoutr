@@ -1,0 +1,11 @@
+%nav.navbar.navbar-dark.bg-primary.text-white
+
+  - if signed_in?
+    .navbar-brand.mr-auto
+      Shoutr
+    .navbar-text.mr-4
+      #{current_user.email}
+    .nav-item
+      #{link_to 'Sign out', sign_out_path, method: :delete, class: "btn btn-outline-light"}
+  - else
+    = link_to 'Sign in', sign_in_path, class: "btn btn-outline-light"

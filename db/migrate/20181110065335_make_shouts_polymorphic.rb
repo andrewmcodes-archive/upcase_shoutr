@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MakeShoutsPolymorphic < ActiveRecord::Migration[5.2]
   class Shout < ApplicationRecord
     belongs_to :content, polymorphic: true
@@ -17,7 +19,7 @@ class MakeShoutsPolymorphic < ActiveRecord::Migration[5.2]
       Shout.find_each do |shout|
         dir.up do
           text_shout = TextShout.create(body: shout.body)
-          shout.update(content_id: text_shout.id, content_type: "TextShout")
+          shout.update(content_id: text_shout.id, content_type: 'TextShout')
         end
 
         dir.down do

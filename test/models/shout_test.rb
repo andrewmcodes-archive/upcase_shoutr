@@ -1,4 +1,6 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 describe Shout do
   subject { Fabricate(:shout) }
@@ -7,5 +9,4 @@ describe Shout do
   it { assert_kind_of Shout, subject }
   it { assert subject.user_id }
   it { assert subject.body }
-
 end

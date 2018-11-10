@@ -1,4 +1,6 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 describe User do
   subject { Fabricate(:user) }
@@ -11,8 +13,8 @@ describe User do
   it { assert subject.encrypted_password }
   it { assert subject.remember_token }
 
-  describe "associations" do
-    it "has shouts" do
+  describe 'associations' do
+    it 'has shouts' do
       assert defined? subject.shouts
     end
   end

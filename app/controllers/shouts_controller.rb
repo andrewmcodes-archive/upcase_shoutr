@@ -1,5 +1,6 @@
-class ShoutsController < ApplicationController
+# frozen_string_literal: true
 
+class ShoutsController < ApplicationController
   def show
     @shout = Shout.find(params[:id])
   end
@@ -12,7 +13,7 @@ class ShoutsController < ApplicationController
   private
 
   def shout_params
-    { content: content_from_params}
+    { content: content_from_params }
   end
 
   def content_from_params
@@ -25,9 +26,9 @@ class ShoutsController < ApplicationController
 
   def redirect_options_for(shout)
     if shout.persisted?
-      { notice: "Shouted successfully!" }
+      { notice: 'Shouted successfully!' }
     else
-      { alert: "Could not shout :(" }
+      { alert: 'Could not shout :(' }
     end
   end
 end

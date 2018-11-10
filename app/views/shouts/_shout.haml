@@ -2,7 +2,7 @@
   .card-body
     = link_to shout.username, shout.user, class: "card-title font-weight-bold"
     %p.mb-0
-      = shout.body
+      = shout.content.body
   .card-footer.text-right
     = link_to shout, class: "card-link" do
       = "Shouted #{time_ago_in_words(shout.created_at)} ago"

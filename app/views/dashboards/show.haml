@@ -4,9 +4,10 @@
     .card
       .card-body
         = form_for @shout do |form|
-          .form-group
-            = label_tag 'body', 'New shout:', class: "card-title font-weight-bold"
-            = form.text_field :body, placeholder: "Enter your shout...", required: true, class: "form-control"
-          = form.submit "shout!", class: "btn btn-primary"
+          = form.fields_for :content do |content_form|
+            .form-group
+              = label_tag 'body', 'New shout:', class: "card-title font-weight-bold"
+              = content_form.text_field :body, placeholder: "Enter your shout...", required: true, class: "form-control"
+            = form.submit "shout!", class: "btn btn-primary"
   .col.bg-light.p-4
     = render @shouts
